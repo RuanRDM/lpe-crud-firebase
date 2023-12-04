@@ -28,6 +28,21 @@ const Sobre = () => {
                                     IFSUL - Passo Fundo
                                 </Typography>
                                 <Typography variant="h5" component="div">
+                                    Autenticação
+                                </Typography>
+                                <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                                    Google utilizando conta gmail com signInWithGoogle
+                                </Typography>
+                                <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                                    Github utilizando conta git com signInWithGitHub
+                                </Typography>
+                                <Typography variant="h5" component="div">
+                                    Aluno Ruan Delatorre Motta
+                                </Typography>
+                                <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                                    Contato: ruan_delatorre@hotmail.com
+                                </Typography>
+                                <Typography variant="h5" component="div">
                                     Professor Jorge Luis Boeira Bavaresco
                                 </Typography>
                                 <Typography sx={{ mb: 1.5 }} color="text.secondary">

@@ -4,14 +4,14 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import {  getPostsFirebase } from '../../servicos/PostsService';
+import {  getPostsPublicFirebase } from '../../servicos/PostsService';
 
 function Home() {
 
     const [listaObjetos, setListaObjetos] = useState([]);
 
     useEffect(() => {
-        getPostsFirebase(setListaObjetos);
+        getPostsPublicFirebase(setListaObjetos);
     }, []);
     
     return (

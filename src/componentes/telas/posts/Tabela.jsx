@@ -48,6 +48,10 @@ function Tabela() {
             {
                 accessorKey: 'uid',
                 header: 'UID'
+            },
+            {
+                accessorKey: 'public',
+                header: 'Public'
             },                                
         ],
         [],

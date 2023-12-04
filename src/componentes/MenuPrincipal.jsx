@@ -71,8 +71,8 @@ function MenuPrincipal() {
 
     return (
         <>
-            <AppBar position="static">
-                <Container maxWidth="xl">
+            <AppBar position="static" sx={{ backgroundColor: '#2196F3'}}>
+                <Container maxWidth="xl" sx={{ backgroundColor: '#2196F3'}}>
                     <Toolbar disableGutters>
                         {/* Inicio tela grande - Logo Home */}
                         <Avatar sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} alt="Logo IFSUL" src={LogoIfsul} />

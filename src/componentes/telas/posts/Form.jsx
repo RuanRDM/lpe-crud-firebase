@@ -54,6 +54,16 @@ function Form() {
                     <MenuItem value='Artigo'>Artigo</MenuItem>
                     <MenuItem value='Documentação'>Documentação</MenuItem>                    
                 </CampoSelect>
+                <CampoSelect
+                    id="selectPublic" label="Public"
+                    idLabel="labelPublic"
+                    tipo="public" name="public" value={objeto.public}
+                    onchange={handleChange} requerido={false}
+                    msgvalido="Public OK"
+                    msginvalido="Informe se o post é publico">                    
+                    <MenuItem value='True'>True</MenuItem>
+                    <MenuItem value='False'>False</MenuItem>                    
+                </CampoSelect>
             </Dialogo>
         </>
     )

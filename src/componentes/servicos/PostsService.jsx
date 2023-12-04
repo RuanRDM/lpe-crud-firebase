@@ -13,9 +13,32 @@ export const getPostsFirebase = async (setListaObjetos) => {
                 url: doc.data().url,
                 usuario: doc.data().usuario,
                 email: doc.data().email,
-                uid: doc.data().uid
+                uid: doc.data().uid,
+                public: doc.data().public
             })))
         })
+    } catch (err) {
+        throw err;
+    }
+}
+
+export const getPostsPublicFirebase = async (setListaObjetos) => {
+    try {
+        const colRef = collection(db, "posts");
+        const q = query(colRef, where("public", "==", "True"));
+        onSnapshot(q, (querySnapshot) => {
+            setListaObjetos(querySnapshot.docs.map(doc => ({
+                id: doc.id,
+                titulo: doc.data().titulo,
+                texto: doc.data().texto,
+                tipo: doc.data().tipo,
+                url: doc.data().url,
+                usuario: doc.data().usuario,
+                email: doc.data().email,
+                uid: doc.data().uid,
+                public: doc.data().public
+            })))
+        });
     } catch (err) {
         throw err;
     }
@@ -34,7 +57,8 @@ export const getPostsUIDFirebase = async (uid, setListaObjetos) => {
                 url: doc.data().url,
                 usuario: doc.data().usuario,
                 email: doc.data().email,
-                uid: doc.data().uid
+                uid: doc.data().uid,
+                public: doc.data().public
             })))
         })
     } catch (err) {
@@ -61,7 +85,8 @@ export const addPostFirebase = async objeto => {
                 url: objeto.url,
                 uid: objeto.uid,
                 usuario: objeto.usuario,
-                email: objeto.email
+                email: objeto.email,
+                public: objeto.public
             }).then(function (docRef) {
                 objeto = { ...objeto, id: docRef.id };
                 return objeto;
@@ -82,7 +107,8 @@ export const updatePostFirebase = async objeto => {
             url: objeto.url,
             uid: objeto.uid,
             usuario: objeto.usuario,
-            email: objeto.email
+            email: objeto.email,
+            public: objeto.public
         })
     } catch (err) {
         throw err;

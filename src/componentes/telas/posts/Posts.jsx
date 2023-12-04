@@ -16,7 +16,7 @@ function Posts() {
     const [listaObjetos, setListaObjetos] = useState([]);
     const [editar, setEditar] = useState(false);
     const [objeto, setObjeto] = useState({
-        id: "", titulo: "", texto: "", tipo: "", url: "",
+        id: "", titulo: "", texto: "", tipo: "", url: "", public: "",
         uid: user?.uid, usuario: user?.displayName, email: user?.email
     });
     const [carregando, setCarregando] = useState(true);
@@ -26,7 +26,7 @@ function Posts() {
         setEditar(false);
         setAlerta({ status: "", message: "" });
         setObjeto({
-            id: "", titulo: "", texto: "", tipo: "", url: "",
+            id: "", titulo: "", texto: "", tipo: "", url: "", public: "",
             uid: user?.uid, usuario: user?.displayName, email: user?.email
         });
         setAbreDialogo(true)
